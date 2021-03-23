@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link data-require="bootstrap@4.1.1" data-semver="4.1.1" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Presentes Natal</h1>
+    <div id="container">
+      <form>
+        <div>
+          <label for="presente_nome">Nome</label>
+          <input id="presente_nome" type="text" />
+        </div>
+        <div>
+          <label for="presente_dar">Presente</label>
+          <input id="presente_dar" type="text" />
+        </div>
+        <div>
+            <label for="presente_nivel">Comportamento: </label>
+            <select id="presente_nivel" name="presente_nivel">
+                <option value="Bom">Bom</option>
+                <option value="Meh">Mais ou menos</option>
+                <option value="Maroto">Maroto</option>
+              </select>
+        </div>
+        <div>
+          <button id="presente_enviar" type="button">Enviar Presente</button>
+        </div>
+      </form>
+    </div>
+    <hr />
+    <div id="container">
+      <h2>Lista de Natal:</h2>
+      <ul id="presente_lista"></ul>
+    </div>
+    <script src="app.js"></script>
+  </body>
+
+</html>

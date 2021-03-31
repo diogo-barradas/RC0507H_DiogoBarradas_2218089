@@ -1,43 +1,41 @@
+<html lang="en" >
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SantaSHOP Login</title>
+        <link rel="stylesheet" href="logincss.css">
+        <link rel="icon" type="image/png" href="img/fav.JPG" />
+      </head>
+    <body>
+        <div class="login-box">
+            <h1><b style="color: #EA4630">Santa</b>SHOP <b>Login</b></h1>
+            <div class="textbox">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <form name="login" method="POST">
+                    <input type="text" name="userid" placeholder="username">
+            </div>
 
-  <head>
-    <link data-require="bootstrap@4.1.1" data-semver="4.1.1" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
-    
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
-    <h1>Presentes Natal</h1>
-    <div id="container">
-      <form>
-        <div>
-          <label for="presente_nome">Nome</label>
-          <input id="presente_nome" type="text" />
+            <div class="textbox">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <input type="password" name="pswrd" placeholder="password">
+            </div>
+            <input type="submit" class="btn" onclick="check(this.form)" value="Login" />
+            </form>
         </div>
-        <div>
-          <label for="presente_dar">Presente</label>
-          <input id="presente_dar" type="text" />
-        </div>
-        <div>
-            <label for="presente_nivel">Comportamento: </label>
-            <select id="presente_nivel" name="presente_nivel">
-                <option value="Bom">Bom</option>
-                <option value="Meh">Mais ou menos</option>
-                <option value="Maroto">Maroto</option>
-              </select>
-        </div>
-        <div>
-          <button id="presente_enviar" type="button">Enviar Presente</button>
-        </div>
-      </form>
-    </div>
-    <hr />
-    <div id="container">
-      <h2>Lista de Natal:</h2>
-      <ul id="presente_lista"></ul>
-    </div>
-    <script src="app.js"></script>
-  </body>
-
+        <script>
+            function check(form)
+            {
+            
+             if(form.userid.value == "admin" && form.pswrd.value == "admin123")
+              {
+                window.open('landing.html')
+              }
+             else
+             {
+               alert("[ERRO] Username ou Password incorreto(os)")
+              }
+            }
+            </script>
+    </body>
 </html>

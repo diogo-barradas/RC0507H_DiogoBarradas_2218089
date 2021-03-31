@@ -7,9 +7,6 @@
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.1
 
-CREATE SCHEMA `santa`;
-use santa;
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -41,8 +38,8 @@ CREATE TABLE `comportamento` (
 --
 
 INSERT INTO `comportamento` (`comportamento_id`, `condicao`, `descricao`) VALUES
-(1, b'1', 'Recebe'),
-(2, b'0', 'Não recebe');
+(5, b'1', 'Recebe'),
+(6, b'0', 'Não recebe');
 
 -- --------------------------------------------------------
 
@@ -63,7 +60,7 @@ CREATE TABLE `criancas` (
 --
 
 INSERT INTO `criancas` (`crianca_id`, `idade`, `nome`, `presente_id`, `comportamento_id`) VALUES
-(1, 22, 'Diogo Barradas', 1, 1);
+(10, 18, 'Diogo', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -82,8 +79,8 @@ CREATE TABLE `presentes` (
 --
 
 INSERT INTO `presentes` (`presente_id`, `nome`, `quantidade`) VALUES
-(1, 'PS5', 100),
-(2, 'Xbox', 10);
+(9, 'Carro', 100),
+(10, 'Xbox', 100);
 
 --
 -- Índices para tabelas despejadas
